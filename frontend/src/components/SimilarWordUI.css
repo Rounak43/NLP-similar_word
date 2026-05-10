@@ -1,0 +1,60 @@
+.similar-word-app {
+  --color-text-primary: #111;
+  --color-text-secondary: #555;
+  --color-text-danger: #c00;
+  --color-border-primary: #111;
+  --color-border-secondary: #ccc;
+  --color-border-tertiary: #eee;
+  --color-border-danger: #fbb;
+  --color-background-primary: #fff;
+  --color-background-secondary: #f5f5f5;
+  --color-background-danger: #fdf2f2;
+  --border-radius-md: 6px;
+  --border-radius-lg: 10px;
+  font-family: var(--font-sans, system-ui, -apple-system, sans-serif);
+  padding: 1.5rem 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.similar-word-app .tabs { display: flex; gap: 8px; margin-bottom: 1.5rem; }
+.similar-word-app .tab { padding: 7px 18px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-secondary); font-size: 13px; cursor: pointer; background: transparent; color: var(--color-text-secondary); transition: all 0.15s; }
+.similar-word-app .tab.active { background: var(--color-background-primary); color: var(--color-text-primary); border-color: var(--color-border-primary); font-weight: 500; }
+.similar-word-app .tab:hover:not(.active) { background: var(--color-background-secondary); }
+.similar-word-app .panel { display: none; }
+.similar-word-app .panel.active { display: block; }
+.similar-word-app .row { display: flex; gap: 10px; align-items: flex-end; }
+.similar-word-app .field { flex: 1; text-align: left; }
+.similar-word-app label { font-size: 12px; color: var(--color-text-secondary); display: block; margin-bottom: 5px; }
+.similar-word-app input[type=text] { width: 100%; padding: 8px 12px; border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-md); font-size: 14px; background: var(--color-background-primary); color: var(--color-text-primary); outline: none; box-sizing: border-box; }
+.similar-word-app input[type=text]:focus { border-color: var(--color-border-primary); }
+.similar-word-app input[type=number] { width: 70px; padding: 8px 10px; border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-md); font-size: 14px; background: var(--color-background-primary); color: var(--color-text-primary); outline: none; box-sizing: border-box; }
+.similar-word-app .btn { padding: 8px 20px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-secondary); font-size: 13px; cursor: pointer; background: var(--color-background-primary); color: var(--color-text-primary); font-weight: 500; white-space: nowrap; transition: all 0.15s; }
+.similar-word-app .btn:hover { background: var(--color-background-secondary); }
+.similar-word-app .btn:active { transform: scale(0.98); }
+.similar-word-app .btn-primary { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+.similar-word-app .btn-primary:hover { background: #333; }
+.similar-word-app .results { margin-top: 1.25rem; }
+.similar-word-app .result-bar { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+.similar-word-app .result-bar:last-child { border-bottom: none; }
+.similar-word-app .rword { font-size: 14px; font-weight: 500; min-width: 120px; color: var(--color-text-primary); text-align: left; }
+.similar-word-app .bar-wrap { flex: 1; height: 6px; background: var(--color-background-secondary); border-radius: 3px; overflow: hidden; }
+.similar-word-app .bar-fill { height: 100%; border-radius: 3px; background: #1a1a1a; transition: width 0.4s ease; }
+.similar-word-app .rscore { font-size: 12px; color: var(--color-text-secondary); min-width: 44px; text-align: right; }
+.similar-word-app .empty { text-align: center; padding: 2rem; font-size: 13px; color: var(--color-text-secondary); }
+.similar-word-app .error-msg { font-size: 13px; color: var(--color-text-danger); background: var(--color-background-danger); border: 0.5px solid var(--color-border-danger); padding: 8px 12px; border-radius: var(--border-radius-md); margin-top: 10px; }
+.similar-word-app .sim-card { background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 1.25rem; margin-top: 1rem; text-align: left; }
+.similar-word-app .sim-score { font-size: 2.5rem; font-weight: 500; color: var(--color-text-primary); line-height: 1; }
+.similar-word-app .sim-label { font-size: 13px; color: var(--color-text-secondary); margin-top: 6px; }
+.similar-word-app .sim-meter { margin-top: 12px; height: 8px; background: var(--color-background-primary); border-radius: 4px; overflow: hidden; }
+.similar-word-app .sim-fill { height: 100%; border-radius: 4px; background: #1a1a1a; transition: width 0.5s ease; }
+.similar-word-app .badge { display: inline-block; padding: 2px 8px; border-radius: 100px; font-size: 11px; font-weight: 500; background: var(--color-background-secondary); color: var(--color-text-secondary); border: 0.5px solid var(--color-border-tertiary); margin-right: 4px; cursor: pointer; }
+.similar-word-app .badge:hover { background: var(--color-background-primary); color: var(--color-text-primary); }
+.similar-word-app .hint { font-size: 12px; color: var(--color-text-secondary); margin-top: 8px; text-align: left; }
+.similar-word-app .section-sep { margin: 1.25rem 0 1rem; border: none; border-top: 0.5px solid var(--color-border-tertiary); }
+.similar-word-app .loading { text-align: center; padding: 1.5rem; font-size: 13px; color: var(--color-text-secondary); }
+.similar-word-app .spinner { display: inline-block; width: 16px; height: 16px; border: 2px solid var(--color-border-secondary); border-top-color: var(--color-text-primary); border-radius: 50%; animation: spin 0.7s linear infinite; vertical-align: middle; margin-right: 8px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.similar-word-app .analogy-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.similar-word-app .analogy-op { font-size: 14px; color: var(--color-text-secondary); font-weight: 500; }
+.similar-word-app .server-note { font-size: 11px; color: var(--color-text-secondary); background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 8px 12px; margin-bottom: 1.25rem; text-align: left; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
